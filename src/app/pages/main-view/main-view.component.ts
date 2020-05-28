@@ -14,27 +14,27 @@ export class MainViewComponent implements OnInit {
 
   board: Board = new Board('Test Board', [
     new Column('Ideas', [
-      "Some random idea",
-      "This is another random idea",
-      "build an awesome application"
+      {name: "Some random idea", progress: 25},
+      {name: "This is another random idea", progress: 0},
+      {name: "build an awesome application", progress: 15}
     ]),
     new Column('Research', [
-      "Lorem ipsum",
-      "foo",
-      "This was in the 'Research' column"
+      {name: "Lorem ipsum", progress: 12},
+      {name: "foo", progress: 100},
+      {name: "This was in the 'Research' column", progress: 55}
     ]),
     new Column('Todo', [
-      'Get to work',
-      'Pick up groceries',
-      'Go home',
-      'Fall asleep'
+      {name: 'Get to work', progress: 50},
+      {name: 'Pick up groceries', progress: 55},
+      {name: 'Go home', progress: 44},
+      {name: 'Fall asleep', progress: 22}
     ]),
     new Column('Done', [
-      'Get up',
-      'Brush teeth',
-      'Take a shower',
-      'Check e-mail',
-      'Walk dog'
+      {name: 'Get up', progress: 100},
+      {name: 'Brush teeth', progress: 100},
+      {name: 'Take a shower', progress: 100},
+      {name: 'Check e-mail', progress: 100},
+      {name: 'Walk dog', progress: 100}
     ])
   ]);
 
@@ -51,6 +51,5 @@ export class MainViewComponent implements OnInit {
         event.currentIndex);
     }
   }
-
 
 }

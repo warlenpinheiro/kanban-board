@@ -2,7 +2,7 @@
   <div class="navbar has-background-dark">
     <div class="navbar-brand">
       <div class="navbar-item">
-        <h1 class="app-name has-gradient-text">kanban</h1>
+        <h1 class="app-name has-gradient-text">Welcome to Kanban</h1>
       </div>
     </div>
   </div>
@@ -17,7 +17,6 @@
 
       <div class="board-columns" cdkDropListGroup>
         <div class="board-column" *ngFor="let column of board.columns">
-
           <div class="column-title">
             {{ column.name }}
           </div>
@@ -27,7 +26,32 @@
           [cdkDropListData]="column.tasks"
           (cdkDropListDropped)="drop($event)">
             <div class="task" *ngFor="let item of column.tasks" cdkDrag>
-              {{ item }}
+              <div class="progress">
+                <mat-progress-bar mode="determinate" value="{{item.progress}}"></mat-progress-bar>
+              </div>
+              <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+              {{ item.name }}
+              <div class="participants">
+                <igx-avatar initials="JS"
+                            [roundShape]=true
+                            size="small">
+                </igx-avatar>
+
+                <igx-avatar initials="JS"
+                            [roundShape]=true
+                            size="small">
+                </igx-avatar>
+
+                <igx-avatar initials="JS"
+                            [roundShape]=true
+                            size="small">
+                </igx-avatar>
+
+                <igx-avatar initials="JS"
+                            [roundShape]=true
+                            size="small">
+                </igx-avatar>
+              </div>
             </div>
           </div>
         </div>

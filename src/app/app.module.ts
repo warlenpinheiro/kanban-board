@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { MainViewComponent } from './pages/main-view/main-view.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { IgxAvatarModule } from 'igniteui-angular';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DragDropModule
+    DragDropModule,
+    MatProgressBarModule,
+    IgxAvatarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
