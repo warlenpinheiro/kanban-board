@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { IgxAvatarModule } from 'igniteui-angular';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { IgxAvatarModule } from 'igniteui-angular';
     BrowserAnimationsModule,
     DragDropModule,
     MatProgressBarModule,
-    IgxAvatarModule
+    IgxAvatarModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
